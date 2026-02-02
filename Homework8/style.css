@@ -1,0 +1,170 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.form {
+    display: block;
+    max-width: 400px;
+    width: 100%;
+    height: 571px;
+    border: 1px solid black;;
+    font-family: sans-serif;
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 30px;
+}
+
+.form-header {
+    font-weight: 700;
+    padding: 0;
+    margin-bottom: 15px;
+}
+
+.label {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.fieldset {
+    border: none;
+    padding: 0;
+    width: 334px;
+    height: 348px;
+}
+
+.input {
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 334px;
+    font-size: 16px;
+    min-height: 30px;
+    margin: 0 0 20px;
+    padding: 5px 12px;
+    line-height: 1.15;
+    outline: none;
+    transition: all 0.5s ease;
+}
+
+
+
+.fieldset1 {
+    border: none;
+    padding: 0;
+    width: 334px;
+    height: 129px;
+}
+
+.textarea {
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 6px;
+    width: 334px;
+    max-height: 150px;
+    min-height: 30px;
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0 0 20px;
+    padding: 5px 12px;
+    resize: vertical;
+    outline: none;
+    transition: all 0.5s ease;
+}
+
+.checkbox-text {
+    display: inline-block;
+    font-size: 14px;
+    margin-bottom: 10px;
+    padding-left: 22px;
+}
+
+.checkbox {
+    position: absolute;
+    appearance: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.checkbox::after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border: 1px solid black;
+    border-radius: 4px;
+    margin-left: -1px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.checkbox:checked::after {
+    background: url("../Homework8/images/check-icon.svg") no-repeat center #9e1fff;
+}
+
+.button {
+    padding: 6px 18px;
+    border: none;
+    border-radius: 6px;
+    background-color: #9e1fff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    opacity: 0,2s;
+    transition: all 0.5s ease;
+}
+
+.button:hover {
+    opacity: 0,85;
+}
+
+.button:not(:disabled):active {
+    background-color: #8719db;
+}
+
+
+.button:disabled,
+.checkbox:disabled::after {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+
+.button:disabled {
+    opacity: 0,7;
+    background-color: violet;
+}
+
+.button:not(:disabled):active {
+    background-color: #8719db;
+}
+
+.input:hover,
+.textarea:hover {
+    background-color: #f3f0f5;
+    transform: translateY(-3px);
+    outline: none;
+    box-shadow: 0 0 0 3px #8719db;
+}
+
+.button:hover {
+    color: white;
+    transform: translateY(-3px);
+    outline: none;
+    box-shadow: 0 0 0 3px #8719db;
+}
+.input:focus-visible,
+.textarea:focus-visible,
+.button:focus-visible,
+.checkbox:focus-visible::after {
+    outline: 2px solid #9e1fff;
+    outline-offset: 1px;
+}
