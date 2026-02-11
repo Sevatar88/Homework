@@ -98,7 +98,7 @@ h6 {
     max-width: 1250px;
 }
 
-.button {
+.play-button {
     position: absolute;
     width: 60px;
     height: 60px;
@@ -117,11 +117,11 @@ h6 {
     transition: background-color 0.2s;
 }
 
-.button:hover {
+.play-button:hover {
     background-color: #39a3ff;
 }
 
-.button:not(:disabled):active {
+.play-button:not(:disabled):active {
     background-color: #1b578b;
 }
 
@@ -135,3 +135,4 @@ h6 {
     font-size: 16px;
     color: #535755;
 }
+
