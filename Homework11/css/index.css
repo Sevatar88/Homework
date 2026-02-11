@@ -141,9 +141,6 @@ details[open] summary::after {
     transform: rotate(180deg);
 }
 
-details[open] {
-}
-
 summary {
     list-style: none;
     display: flex;
@@ -168,4 +165,5 @@ summary::-webkit-details-marker {
 
 details > p {
     padding: 0 20px 20px;
+
 }
