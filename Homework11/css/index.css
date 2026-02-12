@@ -148,6 +148,7 @@ summary {
     justify-content: space-between;
     gap: 10px;
     padding: 20px;
+    cursor: pointer;
 }
 
 summary::after {
@@ -167,3 +168,4 @@ details > p {
     padding: 0 20px 20px;
 
 }
+
