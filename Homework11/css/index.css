@@ -135,6 +135,7 @@ details {
     margin-bottom: 20px;
     border-block: 1px solid #d3cbd9;
     user-select: none;
+    cursor: pointer;
 }
 
 details[open] summary::after {
@@ -168,4 +169,5 @@ details > p {
     padding: 0 20px 20px;
 
 }
+
 
