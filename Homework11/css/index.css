@@ -79,6 +79,14 @@
     margin-bottom: 12px;
 }
 
+.news-info h3 {
+    max-width: 120px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    color: #2c332f;
+}
+
 .news-date {
     display: inline-block;
     margin-bottom: 8px;
@@ -169,5 +177,6 @@ details > p {
     padding: 0 20px 20px;
 
 }
+
 
 
