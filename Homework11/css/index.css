@@ -80,6 +80,7 @@
 }
 
 .news-info h3 {
+    font-family: "Ubuntu", sans-serif;
     max-width: 120px;
     font-weight: 400;
     font-size: 16px;
@@ -177,6 +178,7 @@ details > p {
     padding: 0 20px 20px;
 
 }
+
 
 
 
