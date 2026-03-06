@@ -124,11 +124,10 @@ h6 {
 }
 
 .play-icon {
+    width: 24px;
     -webkit-transform: translate(10%);
         -ms-transform: translate(10%);
             transform: translate(10%);
-    height: 24px;
-    width: 24px;
 }
 
 .final {
@@ -189,5 +188,6 @@ h6 {
     }
 
 }
+
 
 
