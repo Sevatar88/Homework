@@ -85,4 +85,8 @@
     .nav ul {
         flex-direction: column;
     }
+    .final {
+        padding: 0;
+    }
 }
+
