@@ -68,3 +68,21 @@
     letter-spacing: 0.04em;
     color: #858e8a;
 }
+
+@media (width <= 768px) {
+    .nav ul {
+        gap: 40px;
+    }
+}
+
+@media (width <= 576px) {
+    .nav ul {
+        gap: 20px;
+    }
+}
+
+@media (width <= 430px) {
+    .nav ul {
+        flex-direction: column;
+    }
+}
