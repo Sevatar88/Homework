@@ -139,7 +139,7 @@
     text-transform: uppercase;
     color: var(--main-color);
     transition: color var(--transition-time);
-fill: none;
+    fill: none;
 }
 
 @media (any-hover: hover) {
