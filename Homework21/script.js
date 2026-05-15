@@ -1,13 +1,13 @@
 const firstName = `Alexandr `;
 const lastName = `Veselov `;
-const isStudent = `true`;
+const isStudent = true;
 
 console.log(firstName);
 console.log(lastName);
 console.log(isStudent);
 
-const age = `38`;
-const currentYear = `2026`;
+const age = 38;
+const currentYear = 2026;
 const birthYear = currentYear - age;
 
 const aa = `Меня зовут `;
