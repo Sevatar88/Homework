@@ -61,9 +61,7 @@ if (deliveryWeight < 0 || deliveryWeight === 0) {
 
 const deliveryType = prompt("Укажите тип доставки"); 
 
-switch (
-    deliveryType 
-) {
+switch (deliveryType) {
     case "Cтандарт":
     case "стандарт":
         alert("Выбран тип доставки - Стандарт");
@@ -76,7 +74,7 @@ switch (
     case "премиум":
         alert("Выбран тип доставки - Премиум");
         break;
-    default://2.2
+    default: //2.2
         alert("Неверный тип доставки");
 }
 //3
