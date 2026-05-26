@@ -46,7 +46,7 @@ if ((username === "admin" || "user") && password === 123456) {
 } else {
     alert("Доступ запрещён");
 }
-
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //Задание №4
 //1.1
 const deliveryWeight = +prompt("Укажите вес посылки в килограммах"); 
@@ -102,7 +102,7 @@ switch (ratio) {
 }
 
 
-const aaa = Number(basePrice) * Number(ratio);
-const result = "Итоговая стоимость доставки составила - " + aaa + "$"; //5
+const multiPrice = Number(basePrice) * Number(ratio);
+const result = "Итоговая стоимость доставки составила - " + multiPrice + "$"; //5
 alert(result);
 
