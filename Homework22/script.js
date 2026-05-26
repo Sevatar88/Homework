@@ -82,25 +82,22 @@ switch (
 const x = deliveryWeight < 1; 
 const y = deliveryWeight >=1 && deliveryWeight <= 5;
 const basePrice = x
-    ? "Базовая стоимость - 5$"
+    ? "Базовая стоимость - " + 5 + "$"
     : y
-    ? "Базовая стоимость - 10$"
-    : "Базовая стоимость - 15$";
+    ? "Базовая стоимость - " + 10 + "$"
+    : "Базовая стоимость - " + 15 + "$";
 alert(basePrice);
 
 const ratio = deliveryType;
 
 switch (ratio) {
     case "Стандарт":
-        console.log(ratio === 1);
         alert("Коэффициент - 1");
         break;
     case "Экспресс":
-        console.log(ratio === 1.5);
         alert("Коэффициент - 1.5");
         break;
     case "Премиум":
-        console.log(ratio === 2);
         alert("Коэффициент - 2");
 }
 
