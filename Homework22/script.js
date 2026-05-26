@@ -21,18 +21,19 @@ const discount = a
 alert(discount);
 
 const age1 = +prompt("Укажите Ваш возраст");
-const a1 = age < 18;
-const b1 = age >= 18 || age <= 65;
-
-switch (age1) {
+const a1 = age1 < 18;
+const b1 = age1 >= 18 && age1 <= 65;
+const c1 = age > 65;
+switch (true) {
     case a1:
-        alert("Ваша скидка 10%")
+        alert("Ваша скидка 10%");
         break;
     case b1:
-        alert("Ваша скидка 20%")
+        alert("Ваша скидка 20%");
         break;
-    default:
-        alert("Ваша скидка 30%")
+    case c1:
+        alert("Ваша скидка 30%");
+        break;
 }
 
 //Задание №3
