@@ -20,10 +20,11 @@ const discount = a
     : "Ваша скидка 30%";
 alert(discount);
 
-const age1 = +prompt("Укажите Ваш возраст");
+const age1 = prompt("Укажите Ваш возраст");
 const a1 = age1 < 18;
 const b1 = age1 >= 18 && age1 <= 65;
-const c1 = age > 65;
+const c1 = age1 > 65;
+
 switch (true) {
     case a1:
         alert("Ваша скидка 10%");
