@@ -102,7 +102,7 @@ switch (ratio) {
 }
 
 
-const multiPrice = Number(basePrice) * Number(ratio);
+const multiPrice = parseInt(basePrice) * parseInt(ratio);
 const result = "Итоговая стоимость доставки составила - " + multiPrice + "$"; //5
 alert(result);
 
