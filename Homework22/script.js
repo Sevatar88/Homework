@@ -49,59 +49,40 @@ if ((username === "admin" || "user") && password === 123456) {
 }
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //Задание №4
-//1.1
-const deliveryWeight = +prompt("Укажите вес посылки в килограммах"); 
+STANDARD = "Стандарт"
+EXPRESS = "Экспресс"
+PREMIUM = "Премиум"
+const deliveryWeight = +prompt("Укажите вес посылки в килограммах");
 //1.2
-if (deliveryWeight < 0 || deliveryWeight === 0) {
+
+if (deliveryWeight <= 0 || isNaN(deliveryWeight)) {
     //2.1
     alert("Неверный вес посылки");
 } else {
-    alert("Вес посылки " + deliveryWeight + "кг");
+    const deliveryType = prompt(
+        `Укажите тип доставки (Стандарт, Экспресс, Премиум)`
+    );
+
+    const basePrice = deliveryWeight < 1 ? 5 : deliveryWeight <= 5 ? 10 : 15;
+    let ratio = 0;
+
+    switch (deliveryType) {
+        case STANDARD:
+            ratio = 1;
+            break;
+        case EXPRESS:
+            ratio = 1.5;
+            break;
+        case PREMIUM:
+            ratio = 2;
+            break;
+        default:
+            alert("Неверный тип доставки");
+            ratio = 0;
+    }
+
+    if (ratio !== 0) {
+        const finalPrice = basePrice * ratio;
+        alert(`Итоговая стоимость доставки: ${finalPrice}$`);
+    }
 }
-
-const deliveryType = prompt("Укажите тип доставки"); 
-
-switch (deliveryType) {
-    case "Cтандарт":
-    case "стандарт":
-        alert("Выбран тип доставки - Стандарт");
-        break;
-    case "Экспресс":
-    case "экспресс":
-        alert("Выбран тип доставки - Экспресс");
-        break;
-    case "Премиум":
-    case "премиум":
-        alert("Выбран тип доставки - Премиум");
-        break;
-    default: //2.2
-        alert("Неверный тип доставки");
-}
-//3
-const x = deliveryWeight < 1; 
-const y = deliveryWeight >=1 && deliveryWeight <= 5;
-const basePrice = x
-    ? "Базовая стоимость - " + 5 + "$"
-    : y
-    ? "Базовая стоимость - " + 10 + "$"
-    : "Базовая стоимость - " + 15 + "$";
-alert(basePrice);
-
-const ratio = deliveryType;
-
-switch (ratio) {
-    case "Стандарт":
-        alert("Коэффициент - 1");
-        break;
-    case "Экспресс":
-        alert("Коэффициент - 1.5");
-        break;
-    case "Премиум":
-        alert("Коэффициент - 2");
-}
-
-
-const multiPrice = parseInt(basePrice) * parseInt(ratio);
-const result = "Итоговая стоимость доставки составила - " + multiPrice + "$"; //5
-alert(result);
-
