@@ -2,15 +2,14 @@
 
 function calculateFinalPrice(basePrice, discountPercent, taxRate) {
     const discount = (basePrice * discountPercent) / 100;
-    const taxPrice = (basePrice * taxRate) / 100;
-    const price = basePrice - discount + taxPrice;
-    // const price = basePrice - ((basePrice * discountPercent) / 100) + ((basePrice * taxRate) / 100);
-    return price;
+    const discountedPrise = basePrice - discount;
+    const tax = discountedPrise * taxRate;
+    return discountedPrise + tax;
 }
 
 const basePrice = +prompt("Введите базовую стоимость в рублях");
-const discountPercent = +prompt("Введите процент скидки в %");
-const taxRate = +prompt("Введите налоговую ставку в %");
+const discountPercent = +prompt("Введите процент скидки");
+const taxRate = +prompt("Введите налоговую ставку");
 console.log(calculateFinalPrice(basePrice, discountPercent, taxRate));
 
 
