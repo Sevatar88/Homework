@@ -31,9 +31,9 @@ console.log(users);
 function sumAllAges(company) {
     let sum = 0;
     for (let i = 0; i < company.length; i++) {
-        sum += users[i].age / company.length;
+        sum += users[i].age;
     }
-    return sum;
+    return sum / company.length;
 }
 
 console.log(sumAllAges(users));
