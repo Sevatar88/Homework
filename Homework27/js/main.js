@@ -33,7 +33,7 @@ const editDailyTask = (dailyTasks, taskId, text) => {
         dailyTasks[id] = `Отредактирована задача № ${taskId}`;
     }
         const editTask = { [taskKeys.id]: newDailyTaskId(dailyTasks), [taskKeys.text]: text, [taskKeys.done]: false, };
-    dailyTasks.splice(newDailyTaskId, 1);
+    dailyTasks.splice(newDailyTaskId, 0);
     return editTask;
 };
 
