@@ -13,8 +13,7 @@ const dailyTaskError = (taskId) => {
 };
 
 const newDailyTaskId = (dailyTasks) =>
-    dailyTasks.reduce((maxId, task) => Math.max(maxId, task[taskKeys.id]), 0) +
-    1;
+    dailyTasks.reduce((maxId, task) => Math.max(maxId, task[taskKeys.id]), 0) + 1;
 
 const createNewDailyTask = (dailyTasks, text) => {
     const newTask = {
@@ -26,21 +25,10 @@ const createNewDailyTask = (dailyTasks, text) => {
     return newTask;
 };
 
-
-const editDailyTask = (dailyTasks, taskId, text) => {
-    const id = dailyTasks.find((task) => task[taskKeys.id] === taskId);
-    if (id !== -1) {
-        console.log(dailyTasks[id] = `Отредактирована задача № ${taskId}`);
-    }
-        const editTask = { [taskKeys.id]: newDailyTaskId(dailyTasks), [taskKeys.text]: text, [taskKeys.done]: false, };
-    dailyTasks.splice(newDailyTaskId, 0);
-    return editTask;
-};
-
 const completeDailyTaskById = (dailyTasks, taskId) => {
     const task = dailyTasks.find((task) => task[taskKeys.id] === taskId);
     if (!task) {
-        console.error(errTaskNotFound(taskId));
+        console.error(dailyTaskError(taskId));
         return null;
     }
     task[taskKeys.done] = !task[taskKeys.done];
@@ -52,9 +40,24 @@ const deleteDailyTaskById = (dailyTasks, taskId) => {
         (task) => task[taskKeys.id] === taskId
     );
     if (taskIndex === -1) {
-        console.error(errTaskNotFound(taskId));
+        console.error(dailyTaskError(taskId));
         return dailyTasks;
     }
     dailyTasks.splice(taskIndex, 1);
     return dailyTasks;
+};
+
+
+const editDailyTaskById = (dailyTasks, taskId, newText) => {
+    const task = dailyTasks.find((task) => task[taskKeys.id] === taskId);
+    if (!task) {
+        console.error(dailyTaskError(taskId));
+        return null;
+    }
+    if (!newText || newText.trim() === '') {
+        console.error('Task text cannot be empty or null');
+        return null;
+    }
+    task[taskKeys.text] = newText.trim();
+    return task;
 };
