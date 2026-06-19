@@ -30,7 +30,7 @@ const createNewDailyTask = (dailyTasks, text) => {
 const editDailyTask = (dailyTasks, taskId, text) => {
     const id = dailyTasks.find((task) => task[taskKeys.id] === taskId);
     if (id !== -1) {
-        dailyTasks[id] = `Отредактирована задача № ${taskId}`;
+        console.log(dailyTasks[id] = `Отредактирована задача № ${taskId}`);
     }
         const editTask = { [taskKeys.id]: newDailyTaskId(dailyTasks), [taskKeys.text]: text, [taskKeys.done]: false, };
     dailyTasks.splice(newDailyTaskId, 0);
